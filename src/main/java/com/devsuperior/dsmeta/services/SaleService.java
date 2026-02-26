@@ -52,6 +52,8 @@ public class SaleService {
 
 		Page<ReportSummaryProjection> result = repository.reportSummary(Date.valueOf(dataInitial), Date.valueOf(dataFinal), pageable);
 
-        return result.map(x -> new SummaryDTO(x));
+		Page<SummaryDTO> summaryDTOPage = result.map(x -> new SummaryDTO(x));
+
+        return summaryDTOPage;
 	}
 }
