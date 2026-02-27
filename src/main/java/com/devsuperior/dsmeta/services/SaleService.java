@@ -4,7 +4,6 @@ import java.sql.Date;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.ZoneId;
-import java.util.List;
 import java.util.Optional;
 
 import com.devsuperior.dsmeta.dto.SaleDTO;
