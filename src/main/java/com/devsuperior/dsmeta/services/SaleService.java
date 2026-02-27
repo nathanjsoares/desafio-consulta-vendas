@@ -35,7 +35,6 @@ public class SaleService {
 
 		LocalDate dataFinal = dtInitial != null?LocalDate.parse(dtFinal):  LocalDate.ofInstant(Instant.now(), ZoneId.systemDefault());
 		LocalDate dataInitial = dtInitial != null?LocalDate.parse(dtInitial): dataFinal.minusYears(1L);
-		//name = name != ""?name: "";
 
 		Page<ReportSaleProjection> result = repository.reportSales(Date.valueOf(dataInitial), Date.valueOf(dataFinal), name, pageable);
 
